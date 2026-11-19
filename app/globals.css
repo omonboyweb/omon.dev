@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Raw dark palette tokens */
+  --bg-dark: oklch(0.115 0.004 260);
+  --fg-dark: oklch(0.96 0.004 260);
+  --card-dark: oklch(0.155 0.005 260);
+  --muted-dark: oklch(0.205 0.006 260);
+  --muted-fg-dark: oklch(0.67 0.01 260);
+  --border-dark: oklch(1 0 0 / 11%);
+  --signal-dark: oklch(0.75 0.15 195);
+  --emerald-dark: oklch(0.76 0.16 160);
+  --scrollbar-track-dark: oklch(0.14 0 0);
+  --scrollbar-thumb-dark: oklch(0.42 0 0);
+
+  /* Semantic dark theme tokens */
+  --background: var(--bg-dark);
+  --foreground: var(--fg-dark);
+  --card: var(--card-dark);
+  --card-foreground: var(--fg-dark);
+  --popover: var(--card-dark);
+  --popover-foreground: var(--fg-dark);
+  --primary: var(--fg-dark);
+  --primary-foreground: var(--bg-dark);
+  --secondary: var(--muted-dark);
+  --secondary-foreground: var(--fg-dark);
+  --muted: var(--muted-dark);
+  --muted-foreground: var(--muted-fg-dark);
+  --accent: var(--muted-dark);
+  --accent-foreground: var(--fg-dark);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: var(--border-dark);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--signal-dark);
+  --signal: var(--signal-dark);
+  --emerald: var(--emerald-dark);
+  --color-scrollbar-track: var(--scrollbar-track-dark);
+  --color-scrollbar-thumb: var(--scrollbar-thumb-dark);
+  --radius: 0.5rem;
+
+  accent-color: var(--signal);
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+}
+
+/* Defer layout/paint for heavy below-the-fold sections while preserving scroll height */
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto none auto 48rem;
+}
+
+.deferred-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto none auto 8rem;
+}
+
+/* Native top-layer modal scroll containment & backdrop */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: oklch(0 0 0 / 60%);
+  backdrop-filter: blur(4px);
+}
+
+/* Force dark color-scheme inside embedded code blocks so syntax & scrollbars stay cohesive */
+pre,
+.code-surface {
+  color-scheme: dark;
+}
+
+/* Accessible copy-button & live status bubble */
+.copy {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.copy-button {
+  min-inline-size: 24px;
+  min-block-size: 24px;
+}
+
+.copy .tip {
+  position: absolute;
+  inset-block-end: calc(100% + 6px);
+  inset-inline-end: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  border: 1px solid var(--border);
+  background: var(--popover);
+  color: var(--popover-foreground);
+  padding: 0.15rem 0.45rem;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+}
+
+.copy:has(.copy-button[data-copied]) .tip,
+.copy:has(.copy-button[data-failed]) .tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy .tip {
+    transform: none;
+    transition: opacity 0.15s ease;
+  }
+}
+
+/* Architectural hairline grid utility */
+.bg-architectural-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Decorative breadcrumb dividers hidden from screen readers */
+.breadcrumb > ol > li + li::before {
+  content: "/" / "";
+  margin-inline-end: 0.5rem;
+  color: var(--muted-foreground);
+}
+
+.breadcrumb > ol > li > a:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+@media (forced-colors: active) {
+  .breadcrumb > ol > li > a[aria-current="page"] {
+    text-decoration: underline;
+  }
+}
+
+/* Stretched primary card link with elevated independent actions */
+.project-card:has(a.card-link) {
+  position: relative;
+}
+
+.project-card a.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.project-card:has(a.card-link) :is(a:not(.card-link), button, input) {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card a.card-link:focus-visible {
+  outline: none;
+}
+
+.project-card:has(a.card-link:focus-visible) {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-[var(--signal)]/20 selection:text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+  p,
+  blockquote,
+  li,
+  .pretty-text {
+    text-wrap: pretty;
+  }
+}
