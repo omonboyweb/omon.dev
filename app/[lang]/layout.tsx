@@ -15,8 +15,6 @@ import {
   serializeJsonLd,
 } from "@/lib/seo";
 
-export const ensureStatic = "navigation";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin", "cyrillic"],

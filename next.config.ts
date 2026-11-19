@@ -27,8 +27,6 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     root: path.resolve(process.cwd()),
     rules: {
