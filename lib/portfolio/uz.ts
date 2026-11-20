@@ -24,11 +24,11 @@ export const uzContent: LocalizedPortfolioContent = {
   },
   entityOverview: {
     eyebrow: "MUHANDIS PROFILI // TEXNIK SHARH",
-    title: "Omonbek Xojamurodov — Frontend va B2B veb-muhandislik",
+    title: "Omon — Frontend va B2B veb-muhandislik",
     subtitle:
       "Toshkent, Oʻzbekiston va global bozor uchun omon.dev muhandislik profili, asosiy texnologiyalar steki va xizmat yoʻnalishlari.",
     bioSummary:
-      "Omonbek Xojamurodov (omon.dev) — Toshkent shahrida (Oʻzbekiston) faoliyat yurituvchi Frontend Engineer hamda Next.js va React mutaxassisi. U yuqori tezlikdagi veb-ilovalar, B2B avtomatlashtirish platformalari, maxsus CRM va admin panellar hamda Telegram WebApp tizimlarini ishlab chiqadi — jumladan Igoo koʻp tarmoqli CRM (igoo.uz), HomeX Admin RBAC boshqaruv paneli, Tashkent Logistics Telegram avtomatizatsiyasi, HalalHub (wehalalhub.com) va ochiq kodli AuraNews loyihasi.",
+      "Omon (omon.dev) — Toshkent shahrida (Oʻzbekiston) faoliyat yurituvchi Frontend Engineer hamda Next.js va React mutaxassisi. U yuqori tezlikdagi veb-ilovalar, B2B avtomatlashtirish platformalari, maxsus CRM va admin panellar hamda Telegram WebApp tizimlarini ishlab chiqadi — jumladan Igoo koʻp tarmoqli CRM (igoo.uz), HomeX Admin RBAC boshqaruv paneli, Tashkent Logistics Telegram avtomatizatsiyasi, HalalHub (wehalalhub.com) va ochiq kodli AuraNews loyihasi.",
     locationLabel: "Joylashuv",
     locationValue: "Toshkent, Oʻzbekiston (UTC+5) · Masofaviy / Global",
     roleLabel: "Mutaxassislik",
@@ -52,47 +52,6 @@ export const uzContent: LocalizedPortfolioContent = {
       "Next.js tezlik va unumdorlik optimizatsiyasi",
     ],
     profilesTitle: "Tasdiqlangan profillar va AI maʼlumotnoma",
-  },
-  faqSection: {
-    eyebrow: "04 // KOʻP SOʻRALADIGAN SAVOLLAR",
-    title: "Hamkorlik va xizmatlar boʻyicha savol-javoblar",
-    subtitle:
-      "Toshkent va masofaviy loyihalar, asosiy texnologiyalar, B2B CRM tajribasi hamda bogʻlanish tartibi haqida aniq maʼlumot.",
-    items: [
-      {
-        id: "faq-services-tashkent",
-        question:
-          "Omonbek Xojamurodov Toshkentda va masofaviy tarzda qanday veb-xizmatlarni taklif qiladi?",
-        answer:
-          "Omonbek Xojamurodov (omon.dev) Toshkent, Oʻzbekiston va butun dunyo boʻylab mijozlar uchun tezkor veb-ilovalar, B2B avtomatlashtirish tizimlari, maxsus CRM va admin panellar, Telegram WebApp hamda Next.js tezlik optimizatsiyasi xizmatlarini koʻrsatadi.",
-      },
-      {
-        id: "faq-tech-stack",
-        question: "Omonbek Xojamurodovning asosiy texnologiyalar steki nimalardan iborat?",
-        answer:
-          "Asosiy stek TypeScript, React, Next.js (App Router va Server Components), Tailwind CSS, TanStack Query, real-time interfeyslar uchun WebSockets hamda Telegram botlar va backend integratsiyasi uchun Python texnologiyalarini oʻz ichiga oladi.",
-      },
-      {
-        id: "faq-b2b-crm-experience",
-        question:
-          "Amalda qanday B2B veb, CRM va avtomatlashtirish tizimlarini yaratgan?",
-        answer:
-          "Ishlab chiqilgan tizimlarga Igoo (igoo.uz domenida subdomenlararo avtorizatsiyaga ega koʻp tarmoqli taʼlim CRM/ERP tizimi), HomeX Admin (checkbox orqali sahifa ruxsatlarini boshqaruvchi RBAC admin paneli), Tashkent Logistics (2 kunlik biznes tahlilidan soʻng yaratilgan hisob-kitob Telegram boti), HalalHub (wehalalhub.com uchun React Query va Next.js keshlash tizimi) hamda GitHub’dagi ochiq kodli AuraNews platformasi kiradi.",
-      },
-      {
-        id: "faq-location-languages",
-        question:
-          "Qayerda joylashgan va qaysi tillarda hamkorlik qiladi?",
-        answer:
-          "U Toshkent shahrida (Oʻzbekiston, UTC+5) joylashgan boʻlib, Toshkentda gibrid/ofis formatida hamda global jamoalar bilan masofaviy tarzda oʻzbek, ingliz va rus tillarida ishlaydi.",
-      },
-      {
-        id: "faq-hire-contact",
-        question: "Loyiha boshlash yoki ishga taklif qilish uchun qanday bogʻlanish mumkin?",
-        answer:
-          "hello@omon.dev elektron pochtasi, Telegram (@the_khojamurodov — https://t.me/the_khojamurodov), LinkedIn (https://www.linkedin.com/in/omonbekxojamurodov/) yoki GitHub (https://github.com/omonboyweb) orqali bevosita bogʻlanishingiz mumkin.",
-      },
-    ],
   },
   bentoMetrics: [
     {
@@ -706,7 +665,7 @@ export const uzContent: LocalizedPortfolioContent = {
       allArticlesEyebrow: "JURNAL // BLOG VA MAQOLALAR",
       allArticlesTitle: "Dasturlash va mahsulotlar haqida maqolalar",
       allArticlesSubtitle:
-        "Omonbek Xojamurodov (omon.dev) tomonidan frontend tezligi, Next.js arxitekturasi, tizim dizayni va raqamli mahsulotlar haqida tushunarli maqolalar.",
+        "Omon (omon.dev) tomonidan frontend tezligi, Next.js arxitekturasi, tizim dizayni va raqamli mahsulotlar haqida tushunarli maqolalar.",
       authorLabel: "Muallif",
       keyTakeaway: "Asosiy xulosa",
       prevArticle: "Oldingi maqola",
@@ -739,7 +698,7 @@ export const uzContent: LocalizedPortfolioContent = {
     },
     footer: {
       tagline:
-        "Omonbek Xojamurodov tomonidan yaratilgan · omon.dev (Toshkent, Oʻzbekiston). Tez, qulay va tushunarli.",
+        "Omon tomonidan yaratilgan · omon.dev (Toshkent, Oʻzbekiston). Tez, qulay va tushunarli.",
       copyEmailLabel: "hello@omon.dev manzilini nusxalash",
       github: "GitHub",
       linkedin: "LinkedIn",

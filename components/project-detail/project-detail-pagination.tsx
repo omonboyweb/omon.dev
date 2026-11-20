@@ -27,6 +27,7 @@ export function ProjectDetailPagination({
       {prevProject ? (
         <Link
           href={localizePath(locale, `/projects/${prevProject.id}`)}
+          prefetch={false}
           rel="nofollow"
           className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 transition-colors hover:border-foreground/30 hover:bg-card"
         >
@@ -46,6 +47,7 @@ export function ProjectDetailPagination({
       ) : (
         <Link
           href={localizePath(locale, "/projects")}
+          prefetch={false}
           rel="nofollow"
           className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 transition-colors hover:border-foreground/30 hover:bg-card"
         >
@@ -64,6 +66,7 @@ export function ProjectDetailPagination({
       {nextProject ? (
         <Link
           href={localizePath(locale, `/projects/${nextProject.id}`)}
+          prefetch={false}
           rel="nofollow"
           className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 text-right transition-colors hover:border-foreground/30 hover:bg-card"
         >
@@ -83,6 +86,7 @@ export function ProjectDetailPagination({
       ) : (
         <Link
           href={localizePath(locale, "/projects")}
+          prefetch={false}
           rel="nofollow"
           className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 text-right transition-colors hover:border-foreground/30 hover:bg-card"
         >

@@ -64,6 +64,7 @@ export default async function LocalizedProjectsPage({
                 <li>
                   <Link
                     href={localizePath(lang, "")}
+                    prefetch={false}
                     className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-foreground hover:decoration-foreground transition-colors"
                   >
                     {ui.projects.backToHome}
@@ -72,6 +73,7 @@ export default async function LocalizedProjectsPage({
                 <li>
                   <Link
                     href={localizePath(lang, "/projects")}
+                    prefetch={false}
                     aria-current="page"
                     className="font-semibold text-foreground"
                   >
@@ -83,6 +85,7 @@ export default async function LocalizedProjectsPage({
 
             <Link
               href={localizePath(lang, "")}
+              prefetch={false}
               className="inline-flex h-8 items-center gap-1.5 rounded-md border border-border bg-card px-3 font-mono text-xs text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             >
               <ArrowLeft className="size-3.5" />

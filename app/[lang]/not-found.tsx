@@ -49,6 +49,7 @@ export default function LocalizedNotFound() {
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <Link
             href={localizePath(locale, "")}
+            prefetch={false}
             className="inline-flex h-10 items-center gap-2 rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
           >
             <ArrowLeft className="size-4" />
@@ -56,6 +57,7 @@ export default function LocalizedNotFound() {
           </Link>
           <Link
             href={localizePath(locale, "/blog")}
+            prefetch={false}
             className="inline-flex h-10 items-center gap-2 rounded-lg border border-border bg-card px-4 text-sm font-medium text-foreground hover:bg-muted transition-colors"
           >
             <span>{copy.blog}</span>

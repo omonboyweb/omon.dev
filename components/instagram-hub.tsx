@@ -209,6 +209,7 @@ export function InstagramHub({
               <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                 <Link
                   href={localizePath(locale, `/blog/${activePost.slug}`)}
+                  prefetch={false}
                   className="hover:text-[var(--signal)] transition-colors"
                 >
                   {activePost.title}
@@ -222,6 +223,7 @@ export function InstagramHub({
               <div className="pt-1">
                 <Link
                   href={localizePath(locale, `/blog/${activePost.slug}`)}
+                  prefetch={false}
                   className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--signal)] hover:underline"
                 >
                   <span>{ui.openFullArticle}</span>

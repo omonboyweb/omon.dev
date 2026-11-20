@@ -44,7 +44,7 @@ export interface TopNavAndDialogsProps {
   dialogsUi: PortfolioUiStrings["dialogs"];
   telegramLabel: string;
   profile: {
-    fullName: string;
+    name: string;
     role: string;
     availability: string;
     location: string;
@@ -129,6 +129,7 @@ export function TopNavAndDialogs({
           <div className="flex items-center gap-3">
             <Link
               href={localizePath(locale, "")}
+              prefetch={false}
               className="inline-flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-foreground hover:opacity-80 transition-opacity"
             >
               <span className="inline-flex size-6 items-center justify-center rounded border border-border bg-card text-xs">
@@ -148,6 +149,7 @@ export function TopNavAndDialogs({
           >
             <Link
               href={localizePath(locale, "/projects")}
+              prefetch={false}
               rel="nofollow"
               aria-current={isProjectsActive ? "page" : undefined}
               className={cn(
@@ -160,6 +162,7 @@ export function TopNavAndDialogs({
             </Link>
             <Link
               href={localizePath(locale, "/blog")}
+              prefetch={false}
               aria-current={isBlogActive ? "page" : undefined}
               className={cn(
                 "hover:text-foreground transition-colors",
@@ -171,6 +174,7 @@ export function TopNavAndDialogs({
             </Link>
             <Link
               href={localizePath(locale, "#architecture")}
+              prefetch={false}
               className="hover:text-foreground transition-colors"
             >
               {navUi.about}
@@ -189,6 +193,7 @@ export function TopNavAndDialogs({
                   <Link
                     key={item.code}
                     href={localizePath(item.code, subpath)}
+                    prefetch={false}
                     hrefLang={item.code}
                     onClick={() => persistLocalePreference(item.code)}
                     aria-current={active ? "page" : undefined}
@@ -231,6 +236,46 @@ export function TopNavAndDialogs({
             </button>
           </div>
         </div>
+
+        <nav
+          aria-label="Mobile navigation"
+          className="border-t border-border/70 lg:hidden"
+        >
+          <div className="mx-auto flex max-w-6xl items-center gap-5 overflow-x-auto px-4 py-2 font-mono text-xs text-muted-foreground sm:px-6">
+            <Link
+              href={localizePath(locale, "/projects")}
+              prefetch={false}
+              rel="nofollow"
+              aria-current={isProjectsActive ? "page" : undefined}
+              className={cn(
+                "shrink-0 hover:text-foreground transition-colors",
+                isProjectsActive &&
+                  "text-foreground font-semibold underline decoration-[var(--signal)] underline-offset-4",
+              )}
+            >
+              {navUi.projects}
+            </Link>
+            <Link
+              href={localizePath(locale, "/blog")}
+              prefetch={false}
+              aria-current={isBlogActive ? "page" : undefined}
+              className={cn(
+                "shrink-0 hover:text-foreground transition-colors",
+                isBlogActive &&
+                  "text-foreground font-semibold underline decoration-[var(--signal)] underline-offset-4",
+              )}
+            >
+              {navUi.blog}
+            </Link>
+            <Link
+              href={localizePath(locale, "#architecture")}
+              prefetch={false}
+              className="shrink-0 hover:text-foreground transition-colors"
+            >
+              {navUi.about}
+            </Link>
+          </div>
+        </nav>
       </header>
 
       {cmdMounted ? (

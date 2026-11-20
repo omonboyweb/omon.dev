@@ -92,7 +92,7 @@ export default async function LocaleRootLayout({
             dialogsUi={ui.dialogs}
             telegramLabel={ui.footer.telegram}
             profile={{
-              fullName: profile.fullName,
+              name: profile.name,
               role: profile.role,
               availability: profile.availability,
               location: profile.location,

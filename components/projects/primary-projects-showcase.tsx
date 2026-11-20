@@ -155,6 +155,7 @@ export function PrimaryProjectsShowcase({
 
         <Link
           href={localizePath(locale, "/projects")}
+          prefetch={false}
           rel="nofollow"
           className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-primary px-4 text-xs font-medium text-primary-foreground hover:opacity-90 transition-opacity"
         >

@@ -164,6 +164,7 @@ export function CompactProjectCard({
             <h3 className="text-xl font-semibold tracking-tight text-foreground">
               <Link
                 href={localizePath(locale, `/projects/${project.id}`)}
+                prefetch={false}
                 rel="nofollow"
                 className="card-link hover:text-[var(--signal)] transition-colors"
               >
@@ -216,6 +217,7 @@ export function CompactProjectCard({
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Link
             href={localizePath(locale, `/projects/${project.id}`)}
+            prefetch={false}
             rel="nofollow"
             className="inline-flex h-8 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-medium text-primary-foreground hover:opacity-90 transition-opacity"
           >

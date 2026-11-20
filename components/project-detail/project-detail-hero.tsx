@@ -39,6 +39,7 @@ export function ProjectDetailHero({
               <li>
                 <Link
                   href={localizePath(locale, "")}
+                  prefetch={false}
                   className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-foreground hover:decoration-foreground transition-colors"
                 >
                   {ui.backToHome}
@@ -47,6 +48,7 @@ export function ProjectDetailHero({
               <li>
                 <Link
                   href={localizePath(locale, "/projects")}
+                  prefetch={false}
                   rel="nofollow"
                   className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-foreground hover:decoration-foreground transition-colors"
                 >
@@ -56,6 +58,7 @@ export function ProjectDetailHero({
               <li>
                 <Link
                   href={localizePath(locale, `/projects/${project.id}`)}
+                  prefetch={false}
                   rel="nofollow"
                   aria-current="page"
                   className="font-semibold text-foreground"
@@ -68,6 +71,7 @@ export function ProjectDetailHero({
 
           <Link
             href={localizePath(locale, "/projects")}
+            prefetch={false}
             rel="nofollow"
             className="inline-flex h-8 items-center gap-1.5 rounded-md border border-border bg-card px-3 font-mono text-xs text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
           >

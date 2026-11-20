@@ -39,11 +39,11 @@
 
 ## Primary Site URLs
 
-- [Portfolio Home (English)](https://omon.dev/en): Core profile, featured systems, technical stack, services, and FAQs
+- [Portfolio Home (English)](https://omon.dev/en): Core profile, featured systems, technical stack, and services
 - [Portfolio Home (Uzbek)](https://omon.dev/uz): Oʻzbek tilidagi asosiy portfolio va muhandislik sharhi
 - [Portfolio Home (Russian)](https://omon.dev/ru): Портфолио и технический профиль на русском языке
 - [Engineering Blog (English)](https://omon.dev/en/blog): Technical articles on web speed, Next.js, offline-first UX, and system design
-- [Expanded AI Reference (`llms-full.txt`)](https://omon.dev/llms-full.txt): Full technical details, complete case studies, article takeaways, and hiring FAQs
+- [Expanded AI Reference (`llms-full.txt`)](https://omon.dev/llms-full.txt): Full technical details, complete case studies, and article takeaways
 
 ## Engineering Articles
 

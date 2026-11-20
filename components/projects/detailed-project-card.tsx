@@ -201,6 +201,7 @@ export function DetailedProjectCard({
               <h3 className="text-2xl font-semibold tracking-tight text-foreground">
                 <Link
                   href={localizePath(locale, `/projects/${project.id}`)}
+                  prefetch={false}
                   rel="nofollow"
                   className="hover:text-[var(--signal)] transition-colors"
                 >
@@ -288,6 +289,7 @@ export function DetailedProjectCard({
             <div className="flex flex-wrap items-center gap-2.5">
               <Link
                 href={localizePath(locale, `/projects/${project.id}`)}
+                prefetch={false}
                 rel="nofollow"
                 className="inline-flex h-8 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-medium text-primary-foreground hover:opacity-90 transition-opacity"
               >

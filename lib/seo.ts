@@ -537,25 +537,6 @@ export function buildPersonAndWebsiteJsonLd(locale: Locale) {
   };
 }
 
-export function buildFaqJsonLd(locale: Locale) {
-  const { faqSection } = getPortfolioContent(locale);
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": `${absoluteUrl(localizePath(locale, ""))}#faq`,
-    inLanguage: locale,
-    mainEntity: faqSection.items.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-}
-
 export function buildBlogCollectionJsonLd(locale: Locale, posts: BlogPost[]) {
   const content = getPortfolioContent(locale);
   const blogUrl = absoluteUrl(localizePath(locale, "/blog"));

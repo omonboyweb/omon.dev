@@ -83,12 +83,6 @@ export interface PrincipleItem {
   body: string;
 }
 
-export interface FaqItem {
-  id: string;
-  question: string;
-  answer: string;
-}
-
 export interface EntityOverviewContent {
   eyebrow: string;
   title: string;
@@ -254,12 +248,6 @@ export interface LocalizedPortfolioContent {
     recruiterHighlights: { label: string; value: string }[];
   };
   entityOverview: EntityOverviewContent;
-  faqSection: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    items: FaqItem[];
-  };
   bentoMetrics: BentoCard[];
   projects: ProjectItem[];
   blogPosts: BlogPost[];

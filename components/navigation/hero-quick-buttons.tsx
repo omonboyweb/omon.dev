@@ -31,6 +31,7 @@ export function HeroQuickButtons({
       </a>
       <Link
         href={localizePath(locale, "/projects")}
+        prefetch={false}
         rel="nofollow"
         className="inline-flex h-10 items-center gap-2 rounded-lg border border-border bg-card px-4 text-sm font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-muted"
       >

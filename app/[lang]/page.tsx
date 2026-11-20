@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 import { InstagramHub } from "@/components/instagram-hub";
-import { JsonLd } from "@/components/json-ld";
 import { HeroQuickButtons } from "@/components/navigation/hero-quick-buttons";
 import { PrimaryProjectsShowcase } from "@/components/projects/primary-projects-showcase";
 import {
@@ -23,7 +22,7 @@ import {
   PRIMARY_PROJECT_COUNT,
   SUPPORTED_LOCALES,
 } from "@/lib/i18n";
-import { buildFaqJsonLd, buildHomeMetadata } from "@/lib/seo";
+import { buildHomeMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((lang) => ({ lang }));
@@ -59,11 +58,8 @@ export default async function LocalizedHomePage({
     blogPosts,
     principles,
     entityOverview,
-    faqSection,
     ui,
   } = getPortfolioContent(lang);
-
-  const faqJsonLd = buildFaqJsonLd(lang);
 
   const primaryProjects = projects
     .slice(0, PRIMARY_PROJECT_COUNT)
@@ -104,7 +100,7 @@ export default async function LocalizedHomePage({
 
             <p className="font-mono text-xs text-muted-foreground">
               <strong className="font-medium text-foreground">
-                {profile.fullName}
+                {profile.name}
               </strong>
               <span aria-hidden="true"> · </span>
               <span>{profile.role}</span>
@@ -198,6 +194,7 @@ export default async function LocalizedHomePage({
             </div>
             <Link
               href={localizePath(lang, "/projects")}
+              prefetch={false}
               rel="nofollow"
               className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--signal)] hover:underline"
             >
@@ -260,6 +257,7 @@ export default async function LocalizedHomePage({
             </div>
             <Link
               href={localizePath(lang, "/blog")}
+              prefetch={false}
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-1.5 font-mono text-xs text-muted-foreground hover:border-foreground/30 hover:text-foreground transition-colors"
             >
               <BookOpen className="size-3.5 text-[var(--emerald)]" />
@@ -411,13 +409,13 @@ export default async function LocalizedHomePage({
                     <span>@the_khojamurodov</span>
                     <ArrowUpRight className="size-2.5" />
                   </a>
-                  <a
+                  {/* <a
                     href="/llms.txt"
                     className="inline-flex items-center gap-1 rounded-md border border-border bg-background px-2.5 py-1 font-mono text-[11px] text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                   >
                     <FileText className="size-3 text-[var(--emerald)]" />
                     <span>llms.txt</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </article>
@@ -435,47 +433,6 @@ export default async function LocalizedHomePage({
                 ))}
               </ul>
             </article>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 04: Frequently Asked Questions & FAQPage Schema */}
-      <section
-        id="faq"
-        aria-labelledby="faq-heading"
-        className="deferred-section border-t border-border bg-card/20 py-16 sm:py-20"
-      >
-        <JsonLd id="faq-jsonld" data={faqJsonLd} />
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="mb-8 max-w-2xl">
-            <div className="font-mono text-xs text-[var(--signal)]">
-              {faqSection.eyebrow}
-            </div>
-            <h2
-              id="faq-heading"
-              className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
-            >
-              {faqSection.title}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {faqSection.subtitle}
-            </p>
-          </div>
-
-          <div className="faq-accordion space-y-3">
-            {faqSection.items.map((item) => (
-              <details
-                key={item.id}
-                className="rounded-xl border border-border bg-card/50 transition-colors open:border-foreground/25 open:bg-card"
-              >
-                <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-foreground select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:text-base">
-                  {item.question}
-                </summary>
-                <div className="border-t border-border/60 px-5 py-4 text-sm leading-relaxed text-muted-foreground">
-                  {item.answer}
-                </div>
-              </details>
-            ))}
           </div>
         </div>
       </section>

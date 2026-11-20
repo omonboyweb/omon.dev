@@ -25,7 +25,7 @@ export interface RecruiterSummaryDialogProps {
   open: boolean;
   onClose: () => void;
   profile: {
-    fullName: string;
+    name: string;
     role: string;
     availability: string;
     location: string;
@@ -106,7 +106,7 @@ export function RecruiterSummaryDialog({
             id={recruiterTitleId}
             className="mt-1 text-lg font-semibold tracking-tight text-foreground"
           >
-            {profile.fullName} — {profile.role}
+            {profile.name} — {profile.role}
           </h2>
           <p className="mt-0.5 font-mono text-xs text-muted-foreground">
             {profile.availability}
@@ -151,6 +151,7 @@ export function RecruiterSummaryDialog({
                 <span>
                   <Link
                     href={localizePath(locale, `/projects/${proj.id}`)}
+                    prefetch={false}
                     rel="nofollow"
                     onClick={() => safeCloseDialog(dialogRef.current)}
                     className="font-semibold text-foreground hover:text-[var(--signal)] underline decoration-border underline-offset-4"
@@ -208,6 +209,7 @@ export function RecruiterSummaryDialog({
           <span className="font-mono">{profile.location}</span>
           <Link
             href={localizePath(locale, "/projects")}
+            prefetch={false}
             rel="nofollow"
             onClick={() => safeCloseDialog(dialogRef.current)}
             className="font-mono text-[var(--signal)] hover:underline"

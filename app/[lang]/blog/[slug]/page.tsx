@@ -155,6 +155,7 @@ async function BlogPostContent({
                   <li>
                     <Link
                       href={localizePath(lang, "")}
+                      prefetch={false}
                       className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-foreground hover:decoration-foreground transition-colors"
                     >
                       {ui.projects.backToHome}
@@ -163,6 +164,7 @@ async function BlogPostContent({
                   <li>
                     <Link
                       href={localizePath(lang, "/blog")}
+                      prefetch={false}
                       className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-foreground hover:decoration-foreground transition-colors"
                     >
                       {ui.blog.backToBlog}
@@ -171,6 +173,7 @@ async function BlogPostContent({
                   <li>
                     <Link
                       href={localizePath(lang, `/blog/${post.slug}`)}
+                      prefetch={false}
                       aria-current="page"
                       className="font-semibold text-foreground"
                     >
@@ -182,6 +185,7 @@ async function BlogPostContent({
 
               <Link
                 href={localizePath(lang, "/blog")}
+                prefetch={false}
                 className="inline-flex h-8 items-center gap-1.5 rounded-md border border-border bg-card px-3 font-mono text-xs text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >
                 <ArrowLeft className="size-3.5" />
@@ -220,7 +224,7 @@ async function BlogPostContent({
                 <span>
                   {ui.blog.authorLabel}:{" "}
                   <strong className="font-medium text-foreground">
-                    {profile.fullName}
+                    {profile.name}
                   </strong>{" "}
                   ({profile.brandName})
                 </span>
@@ -294,6 +298,7 @@ async function BlogPostContent({
               {prevPost ? (
                 <Link
                   href={localizePath(lang, `/blog/${prevPost.slug}`)}
+                  prefetch={false}
                   className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 transition-colors hover:border-foreground/30 hover:bg-card"
                 >
                   <span className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground group-hover:text-foreground">
@@ -307,6 +312,7 @@ async function BlogPostContent({
               ) : (
                 <Link
                   href={localizePath(lang, "/blog")}
+                  prefetch={false}
                   className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 transition-colors hover:border-foreground/30 hover:bg-card"
                 >
                   <span className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground group-hover:text-foreground">
@@ -322,6 +328,7 @@ async function BlogPostContent({
               {nextPost ? (
                 <Link
                   href={localizePath(lang, `/blog/${nextPost.slug}`)}
+                  prefetch={false}
                   className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 text-right transition-colors hover:border-foreground/30 hover:bg-card"
                 >
                   <span className="inline-flex items-center justify-end gap-1.5 font-mono text-xs text-muted-foreground group-hover:text-foreground">
@@ -335,6 +342,7 @@ async function BlogPostContent({
               ) : (
                 <Link
                   href={localizePath(lang, "/blog")}
+                  prefetch={false}
                   className="group flex flex-col justify-between rounded-xl border border-border bg-card/40 p-4 text-right transition-colors hover:border-foreground/30 hover:bg-card"
                 >
                   <span className="inline-flex items-center justify-end gap-1.5 font-mono text-xs text-muted-foreground group-hover:text-foreground">

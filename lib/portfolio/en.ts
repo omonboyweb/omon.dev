@@ -8,11 +8,11 @@ export const enContent: LocalizedPortfolioContent = {
   },
   entityOverview: {
     eyebrow: "ENTITY PROFILE // TECHNICAL OVERVIEW",
-    title: "Omonbek Xojamurodov — Frontend & B2B Web Engineering",
+    title: "Omon — Frontend & B2B Web Engineering",
     subtitle:
       "Verified engineering profile, core technical stack, and production service scope for omon.dev in Tashkent, Uzbekistan and globally.",
     bioSummary:
-      "Omonbek Xojamurodov (omon.dev) is a Frontend Engineer and Next.js & React Specialist based in Tashkent, Uzbekistan. He designs and engineers high-performance web applications, B2B automation platforms, custom CRM & admin dashboards, and Telegram WebApps—delivering production systems such as the multi-tenant Igoo CRM (igoo.uz), HomeX Admin RBAC dashboard, Tashkent Logistics Telegram automation, HalalHub (wehalalhub.com), and the open-source AuraNews platform.",
+      "Omon (omon.dev) is a Frontend Engineer and Next.js & React Specialist based in Tashkent, Uzbekistan. He designs and engineers high-performance web applications, B2B automation platforms, custom CRM & admin dashboards, and Telegram WebApps—delivering production systems such as the multi-tenant Igoo CRM (igoo.uz), HomeX Admin RBAC dashboard, Tashkent Logistics Telegram automation, HalalHub (wehalalhub.com), and the open-source AuraNews platform.",
     locationLabel: "Location",
     locationValue: "Tashkent, Uzbekistan (UTC+5) · Remote Worldwide",
     roleLabel: "Role",
@@ -36,47 +36,6 @@ export const enContent: LocalizedPortfolioContent = {
       "Next.js performance optimization",
     ],
     profilesTitle: "Verified Profiles & Machine-Readable Context",
-  },
-  faqSection: {
-    eyebrow: "04 // FREQUENTLY ASKED QUESTIONS",
-    title: "Common questions about working together",
-    subtitle:
-      "Direct answers on engineering services in Tashkent and remotely, core technologies, B2B CRM systems, and how to start a project.",
-    items: [
-      {
-        id: "faq-services-tashkent",
-        question:
-          "What web engineering services does Omonbek Xojamurodov offer in Tashkent and remotely?",
-        answer:
-          "Omonbek Xojamurodov (omon.dev) builds high-performance web applications, B2B automation platforms, custom CRM & admin dashboards, Telegram WebApps and workflow bots, and Next.js performance optimizations for teams in Tashkent, across Uzbekistan, and remotely worldwide.",
-      },
-      {
-        id: "faq-tech-stack",
-        question: "What is Omonbek Xojamurodov's core technology stack?",
-        answer:
-          "His primary stack includes TypeScript, React, Next.js (App Router and Server Components), Tailwind CSS, TanStack Query, WebSockets for real-time interfaces, and Python for Telegram Bots and backend integrations.",
-      },
-      {
-        id: "faq-b2b-crm-experience",
-        question:
-          "What B2B web, CRM, and automation systems has he built in production?",
-        answer:
-          "Production systems include Igoo (a multi-tenant CRM and ERP for learning centers with cross-subdomain authentication at igoo.uz), HomeX Admin (an operations dashboard with granular checkbox-based RBAC permissions), Tashkent Logistics (a custom Telegram bot automating order tracking and accounting after on-site workflow discovery), HalalHub (food discovery with React Query and Next.js caching at wehalalhub.com), and AuraNews (open-source AI news aggregation on GitHub).",
-      },
-      {
-        id: "faq-location-languages",
-        question:
-          "Where is Omonbek Xojamurodov based and which languages does he work in?",
-        answer:
-          "He is based in Tashkent, Uzbekistan (UTC+5) and collaborates both on-site/hybrid in Tashkent and remotely with international teams in English, Uzbek, and Russian.",
-      },
-      {
-        id: "faq-hire-contact",
-        question: "How can I hire Omonbek or start a B2B web/CRM project?",
-        answer:
-          "You can reach out directly via email at hello@omon.dev, message on Telegram at @the_khojamurodov (https://t.me/the_khojamurodov), or connect via LinkedIn (https://www.linkedin.com/in/omonbekxojamurodov/) and GitHub (https://github.com/omonboyweb).",
-      },
-    ],
   },
   bentoMetrics: [
     {
@@ -689,7 +648,7 @@ export const enContent: LocalizedPortfolioContent = {
       allArticlesEyebrow: "JOURNAL // BLOG & ARTICLES",
       allArticlesTitle: "Engineering & Product Articles",
       allArticlesSubtitle:
-        "Clear, practical writing on frontend performance, Next.js architecture, system design, and product craft by Omonbek Xojamurodov (omon.dev).",
+        "Clear, practical writing on frontend performance, Next.js architecture, system design, and product craft by Omon (omon.dev).",
       authorLabel: "Written by",
       keyTakeaway: "Key Takeaway",
       prevArticle: "Previous Article",
@@ -723,7 +682,7 @@ export const enContent: LocalizedPortfolioContent = {
     },
     footer: {
       tagline:
-        "Designed & engineered by Omonbek Xojamurodov · omon.dev (Tashkent, Uzbekistan). Fast, accessible, and easy to explore.",
+        "Designed & engineered by Omon · omon.dev (Tashkent, Uzbekistan). Fast, accessible, and easy to explore.",
       copyEmailLabel: "Copy hello@omon.dev email address",
       github: "GitHub",
       linkedin: "LinkedIn",

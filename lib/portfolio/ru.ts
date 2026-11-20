@@ -24,11 +24,11 @@ export const ruContent: LocalizedPortfolioContent = {
   },
   entityOverview: {
     eyebrow: "ПРОФИЛЬ ИНЖЕНЕРА // ТЕХНИЧЕСКИЙ ОБЗОР",
-    title: "Омонбек Хожамуродов (Omonbek Xojamurodov) — Frontend и B2B-разработка",
+    title: "Omon — Frontend и B2B-разработка",
     subtitle:
       "Верифицированный профиль специалиста, ключевой стек технологий и услуги разработки на omon.dev в Ташкенте и удалённо по всему миру.",
     bioSummary:
-      "Омонбек Хожамуродов (Omonbek Xojamurodov, omon.dev) — Frontend Engineer и специалист по Next.js и React из Ташкента (Узбекистан). Создаёт высокопроизводительные веб-приложения, платформы B2B-автоматизации, кастомные CRM и админ-панели, а также Telegram WebApps — включая мультиарендную CRM Igoo (igoo.uz), панель управления HomeX Admin с ролевой системой прав (RBAC), Telegram-автоматизацию для Tashkent Logistics, платформу HalalHub (wehalalhub.com) и открытый проект AuraNews.",
+      "Omon (omon.dev) — Frontend Engineer и специалист по Next.js и React из Ташкента (Узбекистан). Создаёт высокопроизводительные веб-приложения, платформы B2B-автоматизации, кастомные CRM и админ-панели, а также Telegram WebApps — включая мультиарендную CRM Igoo (igoo.uz), панель управления HomeX Admin с ролевой системой прав (RBAC), Telegram-автоматизацию для Tashkent Logistics, платформу HalalHub (wehalalhub.com) и открытый проект AuraNews.",
     locationLabel: "Локация",
     locationValue: "Ташкент, Узбекистан (UTC+5) · Удалённо по всему миру",
     roleLabel: "Роль",
@@ -52,47 +52,6 @@ export const ruContent: LocalizedPortfolioContent = {
       "Оптимизация производительности Next.js",
     ],
     profilesTitle: "Верифицированные профили и AI-индекс",
-  },
-  faqSection: {
-    eyebrow: "04 // ЧАСТЫЕ ВОПРОСЫ",
-    title: "Ответы на основные вопросы о сотрудничестве",
-    subtitle:
-      "Кратко об услугах в Ташкенте и удалённо, технологическом стеке, опыте разработки CRM-систем и способах связи.",
-    items: [
-      {
-        id: "faq-services-tashkent",
-        question:
-          "Какие услуги веб-разработки предоставляет Омонбек Хожамуродов в Ташкенте и удалённо?",
-        answer:
-          "Омонбек Хожамуродов (omon.dev) разрабатывает быстрые веб-приложения, платформы B2B-автоматизации, кастомные CRM и административные панели, Telegram WebApps и боты, а также проводит оптимизацию производительности Next.js для компаний в Ташкенте, по всему Узбекистану и удалённо по всему миру.",
-      },
-      {
-        id: "faq-tech-stack",
-        question: "Какой основной стек технологий использует Омонбек Хожамуродов?",
-        answer:
-          "Основной стек включает TypeScript, React, Next.js (App Router и Server Components), Tailwind CSS, TanStack Query, WebSockets для real-time интерфейсов и Python для разработки Telegram-ботов и интеграции с бэкендом.",
-      },
-      {
-        id: "faq-b2b-crm-experience",
-        question:
-          "Какие B2B-системы, CRM и платформы автоматизации уже реализованы в продакшене?",
-        answer:
-          "Среди реальных проектов — Igoo (мультиарендная CRM/ERP для учебных центров с кросс-доменной авторизацией на igoo.uz), HomeX Admin (операционная админ-панель с точечной настройкой доступа RBAC через чекбоксы), Tashkent Logistics (Telegram-бот для автоматизации учёта и логистики после 2 дней анализа бизнеса на месте), HalalHub (кэширование в Next.js и React Query на wehalalhub.com) и открытая ИИ-платформа новостей AuraNews на GitHub.",
-      },
-      {
-        id: "faq-location-languages",
-        question:
-          "Где находится разработчик и на каких языках ведётся работа?",
-        answer:
-          "Омонбек базируется в Ташкенте, Узбекистан (UTC+5), и работает как очно/гибридно в Ташкенте, так и удалённо с международными командами на русском, английском и узбекском языках.",
-      },
-      {
-        id: "faq-hire-contact",
-        question: "Как связаться для найма или запуска B2B/CRM-проекта?",
-        answer:
-          "Напишите на почту hello@omon.dev, в Telegram @the_khojamurodov (https://t.me/the_khojamurodov), либо свяжитесь через LinkedIn (https://www.linkedin.com/in/omonbekxojamurodov/) и GitHub (https://github.com/omonboyweb).",
-      },
-    ],
   },
   bentoMetrics: [
     {
@@ -705,7 +664,7 @@ export const ruContent: LocalizedPortfolioContent = {
       allArticlesEyebrow: "ЖУРНАЛ // БЛОГ И СТАТЬИ",
       allArticlesTitle: "Статьи об инженерии и продуктах",
       allArticlesSubtitle:
-        "Практические статьи о производительности фронтенда, архитектуре Next.js, системном дизайне и создании продуктов от Омонбека Хожамуродова (omon.dev).",
+        "Практические статьи о производительности фронтенда, архитектуре Next.js, системном дизайне и создании продуктов от Omon (omon.dev).",
       authorLabel: "Автор",
       keyTakeaway: "Главный вывод",
       prevArticle: "Предыдущая статья",
@@ -738,7 +697,7 @@ export const ruContent: LocalizedPortfolioContent = {
     },
     footer: {
       tagline:
-        "Спроектировано и разработано Омонбеком Хожамуродовым · omon.dev (Ташкент, Узбекистан). Быстро, доступно и понятно.",
+        "Спроектировано и разработано Omon · omon.dev (Ташкент, Узбекистан). Быстро, доступно и понятно.",
       copyEmailLabel: "Скопировать адрес hello@omon.dev",
       github: "GitHub",
       linkedin: "LinkedIn",

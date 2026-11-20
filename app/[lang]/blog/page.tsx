@@ -80,6 +80,7 @@ export default async function LocalizedBlogIndexPage({
                   <li>
                     <Link
                       href={localizePath(lang, "")}
+                      prefetch={false}
                       className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-foreground hover:decoration-foreground transition-colors"
                     >
                       {ui.projects.backToHome}
@@ -88,6 +89,7 @@ export default async function LocalizedBlogIndexPage({
                   <li>
                     <Link
                       href={localizePath(lang, "/blog")}
+                      prefetch={false}
                       aria-current="page"
                       className="font-semibold text-foreground"
                     >
@@ -99,6 +101,7 @@ export default async function LocalizedBlogIndexPage({
 
               <Link
                 href={localizePath(lang, "")}
+                prefetch={false}
                 className="inline-flex h-8 items-center gap-1.5 rounded-md border border-border bg-card px-3 font-mono text-xs text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >
                 <ArrowLeft className="size-3.5" />
@@ -154,6 +157,7 @@ export default async function LocalizedBlogIndexPage({
                       <h2 className="text-xl font-semibold tracking-tight text-foreground leading-snug">
                         <Link
                           href={localizePath(lang, `/blog/${post.slug}`)}
+                          prefetch={false}
                           className="hover:text-[var(--signal)] transition-colors"
                         >
                           {post.title}
@@ -167,10 +171,11 @@ export default async function LocalizedBlogIndexPage({
 
                   <div className="mt-6 flex items-center justify-between border-t border-border/70 pt-4 font-mono text-xs">
                     <span className="text-muted-foreground">
-                      {profile.fullName}
+                      {profile.name}
                     </span>
                     <Link
                       href={localizePath(lang, `/blog/${post.slug}`)}
+                      prefetch={false}
                       className="inline-flex items-center gap-1.5 text-[var(--signal)] hover:underline"
                     >
                       <span>{ui.blog.openFullArticle}</span>
