@@ -8,7 +8,7 @@ import {
 } from "@/lib/i18n";
 import { absoluteUrl, OG_IMAGE_URL } from "@/lib/seo";
 
-const SITE_LAST_MODIFIED = "2026-11-19";
+const SITE_LAST_MODIFIED = "2026-11-20";
 
 function buildSitemapAlternates(subpath: string): Record<string, string> {
   const languages: Record<string, string> = {};
@@ -67,6 +67,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
+
+  // 4. Machine-readable LLM context files (/llms.txt & /llms-full.txt)
+  entries.push(
+    {
+      url: absoluteUrl("/llms.txt"),
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: absoluteUrl("/llms-full.txt"),
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+  );
 
   return entries;
 }

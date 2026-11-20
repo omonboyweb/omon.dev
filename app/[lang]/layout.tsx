@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { TopNavAndDialogs } from "@/components/command-dialog";
+import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import {
   getPortfolioContent,
@@ -12,7 +13,6 @@ import {
 import {
   buildPersonAndWebsiteJsonLd,
   buildRootLayoutMetadata,
-  serializeJsonLd,
 } from "@/lib/seo";
 
 const geistSans = Geist({
@@ -82,10 +82,7 @@ export default async function LocaleRootLayout({
     >
       <head>
         <meta name="color-scheme" content="dark" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
-        />
+        <JsonLd id="entity-graph-jsonld" data={jsonLd} />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <div className="min-h-screen flex flex-col bg-background text-foreground">
@@ -116,6 +113,7 @@ export default async function LocaleRootLayout({
             email={profile.email}
             links={{
               telegram: profile.links.telegram,
+              linkedin: profile.links.linkedin,
               instagram: profile.links.instagram,
               github: profile.links.github,
             }}

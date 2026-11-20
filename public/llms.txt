@@ -1,0 +1,62 @@
+# Omonbek Xojamurodov — omon.dev
+
+> Frontend Engineer | Next.js & React Specialist based in Tashkent, Uzbekistan. Building high-performance web applications, B2B automation platforms, custom CRM & admin dashboards, Telegram WebApps, and Next.js performance optimizations.
+
+## Entity Summary
+
+- **Full Name:** Omonbek Xojamurodov (also transliterated as Omonbek Khojamurodov / Омонбек Хожамуродов)
+- **Brand / Domain:** omon.dev (https://omon.dev)
+- **Role:** Frontend Engineer | Next.js & React Specialist
+- **Location:** Tashkent, Uzbekistan (UTC+5) — serving Tashkent, Uzbekistan, and remote teams worldwide
+- **Languages:** English, Uzbek, Russian
+- **Contact Email:** hello@omon.dev
+
+## Core Technical Stack
+
+- **TypeScript** — end-to-end type safety across UI, API clients, and B2B schemas
+- **React** — modern React 19 UI architecture and state modeling
+- **Next.js (App Router, Server Components)** — SSR/SSG rendering, caching, SEO/GEO, and multi-tenant routing
+- **Tailwind CSS** — responsive, accessible, minimalist UI systems
+- **TanStack Query** — client/server cache coordination, deduplication, and incremental pagination
+- **WebSockets** — real-time operational feeds and live updates
+- **Python (Telegram Bots & Backend integration)** — custom Telegram workflow bots, automation pipelines, and backend integrations
+
+## Key Services
+
+- High-performance web applications
+- B2B automation platforms
+- Custom CRM & admin dashboards
+- Telegram WebApps & workflow bots
+- Next.js performance optimization
+
+## Featured Case Studies & Production Systems
+
+- **Igoo (https://igoo.uz)** — Multi-tenant cloud CRM and ERP platform for learning centers (built at Infonex, 2026). Engineered seamless cross-subdomain authentication token handoff from `igoo.uz` to tenant subdomains without repeat logins, alongside full API integration and core UI modules (`Next.js`, `React 19`, `TypeScript`, `TanStack Query`, `Tailwind CSS`).
+- **HomeX Admin** — Operations and management platform (built at Infonex, 2026). Engineered frontend UI architecture and granular checkbox-based Role-Based Access Control (RBAC) with strict route and navigation guards (`React 19`, `TypeScript`, `Tailwind CSS`, `TanStack Query`).
+- **Tashkent Logistics** — Custom B2B logistics and accounting automation (client project, 2026). Conducted 2 days of on-site operational discovery inside the business and built a tailored Telegram bot automating order tracking, driver balances, and accounting (`Telegram Bot API`, `TypeScript`, `Node.js / Fastify`, `PostgreSQL`, `Next.js`).
+- **HalalHub (https://wehalalhub.com)** — Food discovery platform (built at Infonex, 2026). Reduced initial load time and redundant API calls with Next.js + React Query caching, built lag-free Reels video scrolling, viewport-driven infinite scroll, and Google & Apple OAuth (`Next.js`, `TanStack Query`, `TypeScript`, `Tailwind CSS`).
+- **AuraNews (https://github.com/omonboyweb/news-startup)** — Open-source AI news aggregation portal (creator, 2026). Automated web news ingestion and structured summarization via DeepSeek APIs and Google AI Studio (Gemini) paired with a fast Next.js interface (`Next.js 15`, `TypeScript`, `DeepSeek API`, `Google AI Studio`, `PostgreSQL`, `Tailwind CSS`).
+
+## Primary Site URLs
+
+- [Portfolio Home (English)](https://omon.dev/en): Core profile, featured systems, technical stack, services, and FAQs
+- [Portfolio Home (Uzbek)](https://omon.dev/uz): Oʻzbek tilidagi asosiy portfolio va muhandislik sharhi
+- [Portfolio Home (Russian)](https://omon.dev/ru): Портфолио и технический профиль на русском языке
+- [Engineering Blog (English)](https://omon.dev/en/blog): Technical articles on web speed, Next.js, offline-first UX, and system design
+- [Expanded AI Reference (`llms-full.txt`)](https://omon.dev/llms-full.txt): Full technical details, complete case studies, article takeaways, and hiring FAQs
+
+## Engineering Articles
+
+- [How Apps Like Instagram Scale to Millions Without Slowing Down](https://omon.dev/en/blog/how-big-apps-add-servers-without-breaking): Consistent hashing and horizontal scaling without cache stampedes
+- [Why Scrolling 50,000 Items Feels Instant on Your Phone](https://omon.dev/en/blog/why-scrolling-50000-items-feels-instant): 16ms frame budgets and viewport windowing
+- [Designing Apps That Never Lose Your Work When Wi-Fi Drops](https://omon.dev/en/blog/building-apps-that-never-lose-work-offline): Local-first writes, background sync, and timestamped merges
+- [The Simple Mental Trick Behind Instant Search & Smart Filtering](https://omon.dev/en/blog/how-instant-search-avoids-repeating-work): Single-pass state tracking for instant filtering and duplicate detection
+
+## Contact & Verified Profiles
+
+- **Website:** https://omon.dev
+- **Email:** mailto:hello@omon.dev
+- **GitHub:** https://github.com/omonboyweb
+- **LinkedIn:** https://www.linkedin.com/in/omonbekxojamurodov/
+- **Telegram:** https://t.me/the_khojamurodov (@the_khojamurodov)
+- **Instagram:** https://instagram.com/omon.dev (@omon.dev)

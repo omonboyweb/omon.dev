@@ -83,6 +83,28 @@ export interface PrincipleItem {
   body: string;
 }
 
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+export interface EntityOverviewContent {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  bioSummary: string;
+  locationLabel: string;
+  locationValue: string;
+  roleLabel: string;
+  roleValue: string;
+  stackTitle: string;
+  stackItems: string[];
+  servicesTitle: string;
+  serviceItems: string[];
+  profilesTitle: string;
+}
+
 export interface PortfolioUiStrings {
   nav: {
     projects: string;
@@ -203,6 +225,7 @@ export interface PortfolioUiStrings {
     tagline: string;
     copyEmailLabel: string;
     github: string;
+    linkedin: string;
     telegram: string;
   };
 }
@@ -230,6 +253,13 @@ export interface LocalizedPortfolioContent {
     };
     recruiterHighlights: { label: string; value: string }[];
   };
+  entityOverview: EntityOverviewContent;
+  faqSection: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    items: FaqItem[];
+  };
   bentoMetrics: BentoCard[];
   projects: ProjectItem[];
   blogPosts: BlogPost[];
@@ -237,20 +267,39 @@ export interface LocalizedPortfolioContent {
   ui: PortfolioUiStrings;
 }
 
+export const CORE_STACK = [
+  "TypeScript",
+  "React",
+  "Next.js (App Router, Server Components)",
+  "Tailwind CSS",
+  "TanStack Query",
+  "WebSockets",
+  "Python (Telegram Bots & Backend integration)",
+] as const;
+
+export const KEY_SERVICES = [
+  "High-performance web applications",
+  "B2B automation platforms",
+  "Custom CRM & admin dashboards",
+  "Telegram WebApps",
+  "Next.js performance optimization",
+] as const;
+
 export const PROFILE = {
   name: "Omon",
-  fullName: "Omonbek Khojamurodov",
+  fullName: "Omonbek Xojamurodov",
   brandName: "omon.dev",
   handle: "@omon.dev",
   domain: "omon.dev",
-  role: "Software Engineer & Product Builder",
+  role: "Frontend Engineer | Next.js & React Specialist",
   headline:
     "Hi, I’m Omon. I design and build fast, intuitive web apps that solve real problems.",
   subheadline:
-    "Software engineer and creator of @omon.dev. I turn complex ideas into clean, reliable digital products—built with the polish and speed you expect from companies like Google and Meta.",
+    "Frontend Engineer and Next.js & React Specialist in Tashkent, Uzbekistan (omon.dev). I build high-performance web applications, B2B automation platforms, custom CRM & admin dashboards, and Telegram WebApps.",
   availability:
-    "Available for Software Engineering roles & select product builds",
-  targetRoles: "Product Software Engineer · Full-Stack & Frontend Systems",
+    "Available for Frontend Engineering, Next.js/React & B2B CRM/Web builds",
+  targetRoles:
+    "Frontend Engineer · Next.js & React Specialist · B2B Web, CRM & Telegram WebApps",
   location: "Tashkent, Uzbekistan · Remote / Global",
   email: "hello@omon.dev",
   links: {
@@ -261,9 +310,9 @@ export const PROFILE = {
     website: "https://omon.dev",
   },
   recruiterHighlights: [
-    { label: "Focus", value: "Web Apps & Digital Products" },
-    { label: "Standard", value: "Fast, Accessible & Reliable" },
+    { label: "Focus", value: "Next.js, B2B Systems & Custom CRM" },
+    { label: "Core Stack", value: "TypeScript, React, Next.js, Python" },
+    { label: "Location", value: "Tashkent, Uzbekistan · Remote" },
     { label: "Community", value: "@omon.dev on Instagram" },
-    { label: "Goal", value: "Big-Tech Product Engineering" },
   ],
 } as const;

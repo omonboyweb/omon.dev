@@ -1,6 +1,7 @@
 import { ArrowUpRight, GitBranch, Mail, Send, Terminal } from "lucide-react";
 import { CopyCodeButton } from "@/components/copy-code-button";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
+import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 import type { PortfolioUiStrings } from "@/lib/portfolio/types";
 
 export interface SiteFooterProps {
@@ -10,6 +11,7 @@ export interface SiteFooterProps {
     telegram: string;
     instagram: string;
     github: string;
+    linkedin?: string;
   };
   ui: PortfolioUiStrings["footer"];
 }
@@ -58,6 +60,19 @@ export function SiteFooter({
             <span>{ui.telegram}</span>
             <ArrowUpRight className="size-3" />
           </a>
+
+          {links.linkedin ? (
+            <a
+              href={links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-border bg-background px-3 font-mono text-xs text-foreground hover:bg-muted transition-colors"
+            >
+              <LinkedinIcon className="size-3.5 text-[var(--signal)]" />
+              <span>{ui.linkedin}</span>
+              <ArrowUpRight className="size-3" />
+            </a>
+          ) : null}
 
           <a
             href={links.instagram}

@@ -12,6 +12,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
+import { JsonLd } from "@/components/json-ld";
 import {
   getAllBlogSlugs,
   getBlogPostBySlug,
@@ -25,7 +26,6 @@ import {
   buildBlogPostingJsonLd,
   buildBlogPostMetadata,
   buildBreadcrumbJsonLd,
-  serializeJsonLd,
 } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -138,14 +138,8 @@ async function BlogPostContent({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }}
-      />
+      <JsonLd id="blog-posting-jsonld" data={articleJsonLd} />
+      <JsonLd id="blog-post-breadcrumb-jsonld" data={breadcrumbJsonLd} />
 
       {/* Article Hero & Semantic Breadcrumbs */}
       <section className="relative border-b border-border overflow-hidden">

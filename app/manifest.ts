@@ -3,10 +3,10 @@ import { BRAND_NAME } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${BRAND_NAME} — Omonbek Khojamurodov`,
+    name: `${BRAND_NAME} — Omonbek Xojamurodov`,
     short_name: BRAND_NAME,
     description:
-      "Official site and engineering blog of Omonbek Khojamurodov (omon.dev) — Frontend & Full-Stack Software Engineer.",
+      "Portfolio and engineering blog of Omonbek Xojamurodov (omon.dev) — Frontend Engineer | Next.js & React Specialist in Tashkent, Uzbekistan.",
     start_url: "/",
     display: "standalone",
     background_color: "#09090b",

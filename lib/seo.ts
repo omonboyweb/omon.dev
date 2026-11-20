@@ -7,7 +7,7 @@ import {
   type BlogPost,
   type Locale,
 } from "./i18n";
-import { PROFILE } from "./portfolio/types";
+import { CORE_STACK, KEY_SERVICES, PROFILE } from "./portfolio/types";
 
 export const SITE_URL = "https://omon.dev";
 export const BRAND_NAME = "omon.dev";
@@ -16,10 +16,10 @@ export const OG_IMAGE_URL = `${SITE_URL}${OG_IMAGE_PATH}`;
 export const LOGO_IMAGE_URL = `${SITE_URL}/brand-logo.png`;
 
 export const SAME_AS_LINKS = [
-  PROFILE.links.instagram,
-  PROFILE.links.telegram,
   PROFILE.links.github,
   PROFILE.links.linkedin,
+  PROFILE.links.telegram,
+  PROFILE.links.instagram,
 ] as const;
 
 export const INDEX_ROBOTS: NonNullable<Metadata["robots"]> = {
@@ -54,55 +54,58 @@ const OG_LOCALE_BY_LANG: Record<Locale, string> = {
 
 export const SEO_KEYWORDS_BY_LOCALE: Record<Locale, string[]> = {
   en: [
-    "Frontend Engineer Uzbekistan",
-    "Next.js developer Tashkent",
-    "Full-Stack Software Engineer",
-    "Omon dev",
-    "omon.dev",
-    "Omonbek Khojamurodov",
     "Omonbek Xojamurodov",
-    "Software Engineer Uzbekistan",
+    "Omonbek Khojamurodov",
+    "omon.dev",
+    "Omon dev",
+    "Frontend Engineer in Tashkent",
+    "Frontend Engineer Uzbekistan",
+    "Next.js & React Specialist",
+    "Next.js developer Tashkent",
     "React developer Tashkent",
+    "B2B Web & CRM Systems",
+    "B2B automation developer Uzbekistan",
+    "Custom CRM developer Tashkent",
+    "Admin dashboard developer",
+    "Telegram WebApp developer Uzbekistan",
+    "Next.js performance optimization",
     "TypeScript developer Uzbekistan",
-    "Web developer Tashkent",
-    "Product Software Engineer",
-    "Remote Frontend Engineer",
-    "Next.js TypeScript portfolio",
-    "Frontend architecture blog",
+    "TanStack Query",
+    "WebSockets",
+    "Python Telegram Bot developer",
   ],
   uz: [
     "Omonbek Xojamurodov",
     "Omonbek Khojamurodov",
-    "Omon dev",
     "omon.dev",
+    "Omon dev",
     "Frontend dasturchi Toshkent",
+    "Next.js va React mutaxassisi",
     "Next.js dasturchi O'zbekiston",
-    "Full-Stack dasturchi",
-    "Veb dasturchi Toshkent",
-    "Sayt yaratish Toshkent",
-    "React dasturchi O'zbekiston",
-    "Dasturiy ta'minot muhandisi",
-    "IT dasturchi O'zbekiston",
-    "Frontend Engineer Uzbekistan",
-    "Next.js developer Tashkent",
-    "Full-Stack Software Engineer",
+    "React dasturchi Toshkent",
+    "B2B veb-ilovalar va CRM tizimlar",
+    "Maxsus CRM va admin panel yaratish Toshkent",
+    "B2B avtomatlashtirish Toshkent",
+    "Telegram WebApp dasturchi O'zbekiston",
+    "Telegram bot dasturchi Toshkent",
+    "TypeScript dasturchi O'zbekiston",
+    "Next.js tezlik optimizatsiyasi",
   ],
   ru: [
     "Омонбек Хожамуродов",
-    "Omonbek Khojamurodov",
     "Omonbek Xojamurodov",
-    "Omon dev",
+    "Omonbek Khojamurodov",
     "omon.dev",
     "Frontend разработчик Ташкент",
+    "Специалист по Next.js и React Ташкент",
     "Next.js разработчик Узбекистан",
-    "Full-Stack разработчик Ташкент",
-    "Веб-разработчик Узбекистан",
     "React разработчик Ташкент",
-    "Создание веб-приложений Ташкент",
-    "Инженер-программист Узбекистан",
-    "Frontend Engineer Uzbekistan",
-    "Next.js developer Tashkent",
-    "Full-Stack Software Engineer",
+    "Разработка B2B веб-приложений и CRM систем",
+    "Кастомные CRM и админ-панели Ташкент",
+    "B2B автоматизация Узбекистан",
+    "Разработка Telegram WebApps Ташкент",
+    "Оптимизация производительности Next.js",
+    "TypeScript разработчик Узбекистан",
   ],
 };
 
@@ -112,24 +115,27 @@ const HOME_META_BY_LOCALE: Record<
 > = {
   en: {
     title:
-      "omon.dev — Omonbek Khojamurodov | Frontend & Full-Stack Software Engineer",
+      "Omonbek Xojamurodov (omon.dev) — Frontend Engineer | Next.js & React Specialist in Tashkent",
     description:
-      "Official site and engineering blog of Omonbek Khojamurodov (omon.dev) — Frontend & Full-Stack Software Engineer and Next.js developer from Tashkent, Uzbekistan, building fast web products globally.",
-    ogAlt: "omon.dev — Omonbek Khojamurodov | Software Engineer",
+      "Omonbek Xojamurodov (omon.dev) is a Frontend Engineer and Next.js & React Specialist in Tashkent, Uzbekistan, building high-performance web applications, B2B automation platforms, custom CRM & admin dashboards, and Telegram WebApps.",
+    ogAlt:
+      "Omonbek Xojamurodov (omon.dev) — Frontend Engineer | Next.js & React Specialist in Tashkent, Uzbekistan",
   },
   uz: {
     title:
-      "omon.dev — Omonbek Xojamurodov | Frontend va Full-Stack dasturchi",
+      "Omonbek Xojamurodov (omon.dev) — Frontend Engineer | Toshkentdagi Next.js va React mutaxassisi",
     description:
-      "Omonbek Xojamurodov (omon.dev) rasmiy sayti va dasturlash blogi — Toshkent va butun dunyo uchun tezkor Next.js, React hamda Full-Stack veb-ilovalar yaratuvchi dasturiy taʼminot muhandisi.",
-    ogAlt: "omon.dev — Omonbek Xojamurodov | Dasturiy taʼminot muhandisi",
+      "Omonbek Xojamurodov (omon.dev) — Toshkent (Oʻzbekiston) va global bozor uchun yuqori tezlikdagi veb-ilovalar, B2B avtomatlashtirish, maxsus CRM va admin panellar hamda Telegram WebApp yaratuvchi Frontend muhandisi (Next.js va React mutaxassisi).",
+    ogAlt:
+      "Omonbek Xojamurodov (omon.dev) — Frontend Engineer | Next.js va React mutaxassisi",
   },
   ru: {
     title:
-      "omon.dev — Омонбек Хожамуродов | Frontend и Full-Stack разработчик",
+      "Омонбек Хожамуродов (omon.dev) — Frontend Engineer | Специалист по Next.js и React в Ташкенте",
     description:
-      "Официальный сайт и технический блог Омонбека Хожамуродова (omon.dev) — Frontend и Full-Stack инженера, Next.js разработчика из Ташкента (Узбекистан), создающего быстрые веб-продукты по всему миру.",
-    ogAlt: "omon.dev — Омонбек Хожамуродов | Software Engineer",
+      "Омонбек Хожамуродов (Omonbek Xojamurodov, omon.dev) — Frontend-инженер и специалист по Next.js и React в Ташкенте (Узбекистан). Разработка быстрых веб-приложений, B2B-автоматизации, кастомных CRM/админ-панелей и Telegram WebApps.",
+    ogAlt:
+      "Омонбек Хожамуродов (omon.dev) — Frontend Engineer | Next.js & React Specialist",
   },
 };
 
@@ -138,19 +144,19 @@ const BLOG_INDEX_META_BY_LOCALE: Record<
   { title: string; description: string }
 > = {
   en: {
-    title: "Blog — Frontend, Next.js & System Design Articles",
+    title: "Blog — Frontend Engineering, Next.js & B2B System Design",
     description:
-      "Plain-English engineering articles by Omonbek Khojamurodov (omon.dev) covering web performance, Next.js, offline-first UX, and scalable system design.",
+      "Engineering articles by Omonbek Xojamurodov (omon.dev), Frontend Engineer & Next.js Specialist in Tashkent, covering web performance, React architecture, offline-first UX, and scalable B2B system design.",
   },
   uz: {
-    title: "Blog — Frontend, Next.js va tizim arxitekturasi maqolalari",
+    title: "Blog — Frontend, Next.js va B2B tizim arxitekturasi maqolalari",
     description:
-      "Omonbek Xojamurodov (omon.dev) tomonidan veb tezligi, Next.js, oflayn-barqaror ilovalar va tizim arxitekturasi haqida tushunarli maqolalar.",
+      "Omonbek Xojamurodov (omon.dev) tomonidan veb tezligi, Next.js va React arxitekturasi, oflayn-barqaror ilovalar hamda B2B tizim dizayni haqida tushunarli maqolalar.",
   },
   ru: {
-    title: "Блог — статьи о Frontend, Next.js и архитектуре систем",
+    title: "Блог — статьи о Frontend, Next.js, React и архитектуре систем",
     description:
-      "Практические статьи Омонбека Хожамуродова (omon.dev) о производительности веба, Next.js, офлайн-приложениях и масштабируемой архитектуре.",
+      "Практические статьи Омонбека Хожамуродова (Omonbek Xojamurodov, omon.dev) о производительности веба, Next.js и React, офлайн-приложениях и масштабируемой B2B-архитектуре.",
   },
 };
 
@@ -209,7 +215,7 @@ export function buildRootLayoutMetadata(locale: Locale): Metadata {
     },
     description: home.description,
     keywords: SEO_KEYWORDS_BY_LOCALE[locale],
-    authors: [{ name: content.profile.fullName, url: SITE_URL }],
+    authors: [{ name: PROFILE.fullName, url: SITE_URL }],
     creator: content.profile.fullName,
     publisher: BRAND_NAME,
     category: "technology",
@@ -243,6 +249,7 @@ export function buildHomeMetadata(locale: Locale): Metadata {
       absolute: home.title,
     },
     description: home.description,
+    keywords: SEO_KEYWORDS_BY_LOCALE[locale],
     alternates: buildLanguageAlternates(locale, ""),
     robots: INDEX_ROBOTS,
     openGraph: {
@@ -251,6 +258,9 @@ export function buildHomeMetadata(locale: Locale): Metadata {
       url: absoluteUrl(localizePath(locale, "")),
       siteName: BRAND_NAME,
       locale: OG_LOCALE_BY_LANG[locale],
+      alternateLocale: SUPPORTED_LOCALES.filter((l) => l !== locale).map(
+        (l) => OG_LOCALE_BY_LANG[l],
+      ),
       type: "website",
       images: [
         {
@@ -317,9 +327,9 @@ export function buildBlogPostMetadata(locale: Locale, post: BlogPost): Metadata 
     description: post.excerpt,
     keywords: [
       post.category,
-      content.profile.fullName,
+      PROFILE.fullName,
       BRAND_NAME,
-      ...SEO_KEYWORDS_BY_LOCALE[locale].slice(0, 8),
+      ...SEO_KEYWORDS_BY_LOCALE[locale].slice(0, 10),
     ],
     authors: [{ name: content.profile.fullName, url: SITE_URL }],
     alternates: buildLanguageAlternates(locale, path),
@@ -334,7 +344,7 @@ export function buildBlogPostMetadata(locale: Locale, post: BlogPost): Metadata 
       publishedTime: `${post.publishedDateIso}T00:00:00.000Z`,
       authors: [content.profile.fullName],
       section: post.category,
-      tags: [post.category, BRAND_NAME, content.profile.fullName],
+      tags: [post.category, BRAND_NAME, PROFILE.fullName],
       images: [
         {
           url: OG_IMAGE_URL,
@@ -386,9 +396,38 @@ export function serializeJsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
+const AREA_SERVED_PLACES = [
+  {
+    "@type": "City",
+    name: "Tashkent",
+    containedInPlace: {
+      "@type": "Country",
+      name: "Uzbekistan",
+    },
+  },
+  {
+    "@type": "Country",
+    name: "Uzbekistan",
+  },
+  {
+    "@type": "AdministrativeArea",
+    name: "Remote / Worldwide",
+  },
+];
+
+const ENTITY_KNOWS_ABOUT = [
+  ...CORE_STACK,
+  ...KEY_SERVICES,
+  "Next.js App Router",
+  "React Server Components",
+  "Multi-Tenant SaaS Architecture",
+  "Role-Based Access Control (RBAC)",
+  "Frontend Performance Optimization",
+];
+
 export function buildPersonAndWebsiteJsonLd(locale: Locale) {
-  const content = getPortfolioContent(locale);
   const homeUrl = absoluteUrl(localizePath(locale, ""));
+  const description = HOME_META_BY_LOCALE[locale].description;
 
   return {
     "@context": "https://schema.org",
@@ -396,10 +435,12 @@ export function buildPersonAndWebsiteJsonLd(locale: Locale) {
       {
         "@type": "Person",
         "@id": `${SITE_URL}/#person`,
-        name: content.profile.fullName,
+        name: PROFILE.fullName,
+        givenName: "Omonbek",
+        familyName: "Xojamurodov",
         alternateName: [
-          "Omonbek Khojamurodov",
           "Omonbek Xojamurodov",
+          "Omonbek Khojamurodov",
           "Омонбек Хожамуродов",
           "Omon",
           "Omon dev",
@@ -407,25 +448,27 @@ export function buildPersonAndWebsiteJsonLd(locale: Locale) {
         ],
         url: homeUrl,
         image: LOGO_IMAGE_URL,
-        jobTitle: content.profile.role,
-        description: HOME_META_BY_LOCALE[locale].description,
+        jobTitle: PROFILE.role,
+        description,
         email: `mailto:${PROFILE.email}`,
         address: {
           "@type": "PostalAddress",
           addressLocality: "Tashkent",
+          addressRegion: "Tashkent",
           addressCountry: "UZ",
         },
+        homeLocation: {
+          "@type": "Place",
+          name: "Tashkent, Uzbekistan",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Tashkent",
+            addressCountry: "UZ",
+          },
+        },
+        areaServed: AREA_SERVED_PLACES,
         knowsLanguage: ["en", "ru", "uz"],
-        knowsAbout: [
-          "Frontend Engineering",
-          "Full-Stack Software Engineering",
-          "Next.js",
-          "React",
-          "TypeScript",
-          "Web Performance",
-          "System Design",
-          "Product Engineering",
-        ],
+        knowsAbout: ENTITY_KNOWS_ABOUT,
         brand: {
           "@type": "Brand",
           name: BRAND_NAME,
@@ -437,18 +480,79 @@ export function buildPersonAndWebsiteJsonLd(locale: Locale) {
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
-        name: BRAND_NAME,
-        url: homeUrl,
+        name: `${BRAND_NAME} — ${PROFILE.fullName}`,
+        alternateName: BRAND_NAME,
+        url: SITE_URL,
         inLanguage: locale,
-        description: HOME_META_BY_LOCALE[locale].description,
+        description,
         publisher: {
           "@id": `${SITE_URL}/#person`,
         },
         author: {
           "@id": `${SITE_URL}/#person`,
         },
+        about: {
+          "@id": `${SITE_URL}/#person`,
+        },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${SITE_URL}/#service`,
+        name: `${PROFILE.fullName} — ${BRAND_NAME} Frontend & B2B Web Engineering`,
+        url: homeUrl,
+        image: OG_IMAGE_URL,
+        logo: LOGO_IMAGE_URL,
+        description,
+        founder: {
+          "@id": `${SITE_URL}/#person`,
+        },
+        provider: {
+          "@id": `${SITE_URL}/#person`,
+        },
+        email: PROFILE.email,
+        priceRange: "$$$",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Tashkent",
+          addressRegion: "Tashkent",
+          addressCountry: "UZ",
+        },
+        areaServed: AREA_SERVED_PLACES,
+        knowsAbout: ENTITY_KNOWS_ABOUT,
+        serviceType: [...KEY_SERVICES],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Frontend & B2B Web Engineering Services",
+          itemListElement: KEY_SERVICES.map((serviceName) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: serviceName,
+            },
+          })),
+        },
+        sameAs: [...SAME_AS_LINKS],
       },
     ],
+  };
+}
+
+export function buildFaqJsonLd(locale: Locale) {
+  const { faqSection } = getPortfolioContent(locale);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${absoluteUrl(localizePath(locale, ""))}#faq`,
+    inLanguage: locale,
+    mainEntity: faqSection.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 }
 
@@ -470,7 +574,7 @@ export function buildBlogCollectionJsonLd(locale: Locale, posts: BlogPost[]) {
     publisher: {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,
-      name: content.profile.fullName,
+      name: PROFILE.fullName,
     },
     blogPost: posts.map((post) => ({
       "@type": "BlogPosting",
@@ -524,7 +628,7 @@ export function buildBlogPostingJsonLd(locale: Locale, post: BlogPost) {
         url: LOGO_IMAGE_URL,
       },
     },
-    keywords: [post.category, BRAND_NAME, content.profile.fullName],
+    keywords: [post.category, BRAND_NAME, PROFILE.fullName],
   };
 }
 

@@ -8,6 +8,7 @@ import {
   Calendar,
   Clock,
 } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
 import {
   getPortfolioContent,
   isLocale,
@@ -19,7 +20,6 @@ import {
   buildBlogCollectionJsonLd,
   buildBlogIndexMetadata,
   buildBreadcrumbJsonLd,
-  serializeJsonLd,
 } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -62,14 +62,8 @@ export default async function LocalizedBlogIndexPage({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: serializeJsonLd(blogJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }}
-      />
+      <JsonLd id="blog-collection-jsonld" data={blogJsonLd} />
+      <JsonLd id="blog-breadcrumb-jsonld" data={breadcrumbJsonLd} />
 
       <main className="flex-1">
         {/* Page Header & Semantic Breadcrumb */}
