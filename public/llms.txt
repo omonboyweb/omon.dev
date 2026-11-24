@@ -42,14 +42,14 @@
 - [Portfolio Home (English)](https://omon.dev/en): Core profile, featured systems, technical stack, and services
 - [Portfolio Home (Uzbek)](https://omon.dev/uz): Oʻzbek tilidagi asosiy portfolio va muhandislik sharhi
 - [Portfolio Home (Russian)](https://omon.dev/ru): Портфолио и технический профиль на русском языке
-- [Engineering Blog (English)](https://omon.dev/en/blog): Technical articles on web speed, Next.js, offline-first UX, and system design
+- [Engineering Blog (English)](https://omon.dev/en/blog): Technical articles on web speed, Next.js, micro-frontends, and system design
 - [Expanded AI Reference (`llms-full.txt`)](https://omon.dev/llms-full.txt): Full technical details, complete case studies, and article takeaways
 
 ## Engineering Articles
 
 - [How Apps Like Instagram Scale to Millions Without Slowing Down](https://omon.dev/en/blog/how-big-apps-add-servers-without-breaking): Consistent hashing and horizontal scaling without cache stampedes
 - [Why Scrolling 50,000 Items Feels Instant on Your Phone](https://omon.dev/en/blog/why-scrolling-50000-items-feels-instant): 16ms frame budgets and viewport windowing
-- [Designing Apps That Never Lose Your Work When Wi-Fi Drops](https://omon.dev/en/blog/building-apps-that-never-lose-work-offline): Local-first writes, background sync, and timestamped merges
+- [Is a Monolithic Frontend Slowing Your Team Down? The Solution: Micro-Frontends](https://omon.dev/en/blog/micro-frontends-when-monolith-slows-teams-down): Module Federation, Next.js Multi-Zones, Turborepo/Nx monorepos, and when to stick with a Modular Monolith
 - [The Simple Mental Trick Behind Instant Search & Smart Filtering](https://omon.dev/en/blog/how-instant-search-avoids-repeating-work): Single-pass state tracking for instant filtering and duplicate detection
 
 ## Contact & Verified Profiles

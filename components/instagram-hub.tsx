@@ -57,6 +57,14 @@ export function InstagramHub({
   >("all");
   const [selectedId, setSelectedId] = useState<string>(blogPosts[0]?.id ?? "");
 
+  const visibleCategoryKeys = useMemo(
+    () =>
+      BLOG_CATEGORY_KEYS.filter(
+        (key) => key === "all" || blogPosts.some((p) => p.categoryKey === key),
+      ),
+    [blogPosts],
+  );
+
   const filteredPosts = useMemo(() => {
     if (selectedCategory === "all") return blogPosts;
     return blogPosts.filter((p) => p.categoryKey === selectedCategory);
@@ -98,7 +106,7 @@ export function InstagramHub({
           role="group"
           aria-label="Filter blog posts by topic"
         >
-          {BLOG_CATEGORY_KEYS.map((key) => {
+          {visibleCategoryKeys.map((key) => {
             const active = selectedCategory === key;
             const label =
               key === "all" ? ui.allCategories : ui.categories[key];

@@ -146,17 +146,17 @@ const BLOG_INDEX_META_BY_LOCALE: Record<
   en: {
     title: "Blog — Frontend Engineering, Next.js & B2B System Design",
     description:
-      "Engineering articles by Omonbek Xojamurodov (omon.dev), Frontend Engineer & Next.js Specialist in Tashkent, covering web performance, React architecture, offline-first UX, and scalable B2B system design.",
+      "Engineering articles by Omonbek Xojamurodov (omon.dev), Frontend Engineer & Next.js Specialist in Tashkent, covering web performance, React architecture, micro-frontends, and scalable B2B system design.",
   },
   uz: {
     title: "Blog — Frontend, Next.js va B2B tizim arxitekturasi maqolalari",
     description:
-      "Omonbek Xojamurodov (omon.dev) tomonidan veb tezligi, Next.js va React arxitekturasi, oflayn-barqaror ilovalar hamda B2B tizim dizayni haqida tushunarli maqolalar.",
+      "Omonbek Xojamurodov (omon.dev) tomonidan veb tezligi, Next.js va React arxitekturasi, micro-frontends hamda B2B tizim dizayni haqida tushunarli maqolalar.",
   },
   ru: {
     title: "Блог — статьи о Frontend, Next.js, React и архитектуре систем",
     description:
-      "Практические статьи Омонбека Хожамуродова (Omonbek Xojamurodov, omon.dev) о производительности веба, Next.js и React, офлайн-приложениях и масштабируемой B2B-архитектуре.",
+      "Практические статьи Омонбека Хожамуродова (Omonbek Xojamurodov, omon.dev) о производительности веба, Next.js и React, микрофронтендах и масштабируемой B2B-архитектуре.",
   },
 };
 

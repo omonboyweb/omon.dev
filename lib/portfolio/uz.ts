@@ -486,34 +486,42 @@ export const uzContent: LocalizedPortfolioContent = {
         "Eng tezkor dastur koʻproq ishlamaydi — u foydalanuvchi hozir koʻrmayotgan ortiqcha ishni bajarmaydi.",
     },
     {
-      id: "post-offline-first-apps",
-      slug: "building-apps-that-never-lose-work-offline",
-      categoryKey: "product-craft",
-      category: "Mahsulot sifati",
+      id: "post-micro-frontends",
+      slug: "micro-frontends-when-monolith-slows-teams-down",
+      categoryKey: "system-design",
+      category: "Tizim arxitekturasi",
       title:
-        "Wi-Fi uzilganda ham mehnatingizni yoʻqotmaydigan ilovalarni yaratish",
+        "Monolit frontend jamoani sekinlashtiryaptimi? Yechim — Micro-frontends",
       excerpt:
-        "Poyezd tunnelga kirgani uchun 20 daqiqalik yozuvlaringiz oʻchib ketmasligi kerak. Qurilmada birinchi saqlash odati foydalanuvchini qanday himoya qiladi.",
+        "Loyiha kattalashgani sari bitta kod bazasida 10–20 ta dasturchi ishlashi qiyinlashadi: build vaqti cho‘ziladi, bitta kichik xato butun saytni to‘xtatadi, deploy qilish esa bosh og‘rig‘iga aylanadi.",
       publishedAt: "21-okt, 2026",
       publishedDateIso: "2026-10-21",
-      readTime: "4 daq oʻqish",
+      readTime: "3 daq oʻqish",
       sections: [
         {
-          heading: "Avval qurilmada saqlash, keyin sezdirmay sinxronlash",
+          heading: "Micro-frontends nima va qanday muammoni hal qiladi?",
           paragraphs: [
-            "Anʼanaviy veb-sahifalar uzoqdagi server javob berguncha kutish belgisini aylantirib turadi. Agar oʻsha paytda aloqa uzilsa, kiritilgan oʻzgarishlar yoʻqoladi.",
-            "FlowCanvasʼda har bir tahrir ikki millisekund ichida qurilmaning oʻzida saqlanadi va internet paydo boʻlishi bilan fonda xotirjam sinxronlanadi.",
+            "Loyiha kattalashgani sari bitta kod bazasida 10–20 ta dasturchi ishlashi qiyinlashadi: build vaqti cho‘ziladi, bitta kichik xato butun saytni to‘xtatadi, deploy qilish esa bosh og‘rig‘iga aylanadi.",
+            "Backend’dagi Microservices g‘oyasini frontend’ga olib kirish Micro-frontends deyiladi. Bunda ilova biznes-bo‘limlarga ajratiladi (masalan: Auth, Dashboard, Checkout) va har biri mustaqil yozilib, alohida deploy qilinadi.",
           ],
         },
         {
-          heading: "Jamoa tahrirlarini oʻchirib yubormasdan birlashtirish",
+          heading: "Real loyihalarda ishlatiladigan 3 ta asosiy usul",
           paragraphs: [
-            "Ikki hamkasb oflayn paytda turli kartochkalarni tahrir qilsa, har bir oʻzgarish tartib belgisiga ega boʻladi va tarmoqqa ulanganda bir-birini oʻchirmasdan toʻliq birlashadi.",
+            "1. Module Federation (Webpack 5 / Rspack) — Eng mashhur yondashuv. Bir ilova (Host) ishlab turgan paytda (runtime) boshqa ilovadan (Remote) tayyor komponentlarni yuklab oladi. Kodni qayta build qilmasdan yangilash mumkin.",
+            "2. Next.js Multi-Zones — Agar stack Next.js bo‘lsa, eng oson va barqaror yo‘l. Har bir bo‘lim alohida Next.js loyiha bo‘ladi, lekin foydalanuvchi uchun bitta domen ostida ishlaydi (/, /shop, /admin).",
+            "3. Monorepo + Shared Packages (Turborepo / Nx) — To‘liq micro-frontendga o‘tishdan oldingi eng to‘g‘ri qadam. Kod bitta repoda turadi, UI-kit va utilitalar umumiy paket qilinadi, lekin har bir app alohida build va deploy bo‘ladi.",
+          ],
+        },
+        {
+          heading: "Qachon ishlatmaslik kerak?",
+          paragraphs: [
+            "Agar jamoangizda 5 kishidan kam frontendchi bo‘lsa yoki MVP qilayotgan bo‘lsangiz, Micro-frontends kerak emas. Bu ortiqcha murakkablik (DevOps, routing, state ulashish muammolari) olib keladi. Avval toza Modular Monolith quring, keyin bo‘ling.",
           ],
         },
       ],
       keyTakeaway:
-        "Foydalanuvchini hurmat qilish — uni kutishga majbur qilmaslik va internet sustligi sababli mehnatini yoʻqotmaslikdir.",
+        "Kichik jamoa yoki MVP uchun Micro-frontends ortiqcha murakkablik olib keladi — avval toza Modular Monolith quring, jamoa va loyiha kattalashgach bo‘ling.",
     },
     {
       id: "post-smart-search-habits",

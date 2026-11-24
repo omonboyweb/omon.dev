@@ -469,33 +469,42 @@ export const enContent: LocalizedPortfolioContent = {
         "The fastest software doesn't work harder—it politely skips work the person using the app can't even see.",
     },
     {
-      id: "post-offline-first-apps",
-      slug: "building-apps-that-never-lose-work-offline",
-      categoryKey: "product-craft",
-      category: "Product Craft",
-      title: "Designing Apps That Never Lose Your Work When Wi-Fi Drops",
+      id: "post-micro-frontends",
+      slug: "micro-frontends-when-monolith-slows-teams-down",
+      categoryKey: "system-design",
+      category: "System Design",
+      title:
+        "Is a Monolithic Frontend Slowing Your Team Down? The Solution: Micro-Frontends",
       excerpt:
-        "You shouldn't lose 20 minutes of notes because your train went through a tunnel. How local-first habits protect everyday users.",
+        "As a project grows, having 10–20 developers work in a single codebase gets painful: builds slow down, one small bug can break the entire site, and deployments turn into a headache.",
       publishedAt: "Oct 21, 2026",
       publishedDateIso: "2026-10-21",
-      readTime: "4 min read",
+      readTime: "3 min read",
       sections: [
         {
-          heading: "Save locally first, sync quietly second",
+          heading: "What Are Micro-Frontends and What Problem Do They Solve?",
           paragraphs: [
-            "Traditional web forms freeze with a spinning circle until a distant server confirms your save. If your signal drops halfway through, your changes vanish.",
-            "In FlowCanvas, every edit saves on your device immediately in under two milliseconds. The app then syncs changes quietly in the background whenever a connection is available.",
+            "As a project grows, having 10–20 developers work in a single codebase gets painful: build times stretch out, one small mistake can bring down the entire site, and deployments become a constant headache.",
+            "Bringing the backend Microservices idea to the frontend is called Micro-Frontends. The application is split by business domain (such as Auth, Dashboard, and Checkout), where each part is built and deployed independently.",
           ],
         },
         {
-          heading: "Merging teammate edits without overwriting",
+          heading: "3 Main Approaches Used in Real Projects",
           paragraphs: [
-            "When two teammates edit different cards on the same board while offline, each update carries a timestamped order marker so both changes combine cleanly instead of one person erasing the other.",
+            "1. Module Federation (Webpack 5 / Rspack) — The most popular approach. While running (at runtime), one application (Host) dynamically loads ready-made components from another application (Remote), letting teams ship updates without rebuilding everything.",
+            "2. Next.js Multi-Zones — If your stack is Next.js, this is the easiest and most stable path. Each section is its own standalone Next.js app, yet to the user everything runs seamlessly under a single domain (/, /shop, /admin).",
+            "3. Monorepo + Shared Packages (Turborepo / Nx) — The smartest stepping stone before full micro-frontends. Code lives in one repository with shared UI-kit and utility packages, while each app is built and deployed independently.",
+          ],
+        },
+        {
+          heading: "When Should You Avoid Micro-Frontends?",
+          paragraphs: [
+            "If your team has fewer than 5 frontend engineers or you are building an MVP, you don't need Micro-Frontends. They introduce unnecessary complexity across DevOps, routing, and shared state. Build a clean Modular Monolith first, then split when you actually outgrow it.",
           ],
         },
       ],
       keyTakeaway:
-        "Respecting someone's time means never making them wait on a spinner—and never losing work because of spotty Wi-Fi.",
+        "Don't adopt Micro-Frontends too early for a small team or MVP—build a clean Modular Monolith first, and split only when team scale demands it.",
     },
     {
       id: "post-smart-search-habits",

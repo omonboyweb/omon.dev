@@ -113,7 +113,7 @@
    - Key Takeaway: Consistent hashing prevents cache reshuffling storms when scaling servers, keeping latency steady under growth.
 2. **Why Scrolling 50,000 Items Feels Instant on Your Phone** (`https://omon.dev/en/blog/why-scrolling-50000-items-feels-instant`, Nov 04, 2026, Web Speed)
    - Key Takeaway: Meeting the 16ms 60fps frame budget by virtualizing and rendering only the visible viewport window plus a small buffer.
-3. **Designing Apps That Never Lose Your Work When Wi-Fi Drops** (`https://omon.dev/en/blog/building-apps-that-never-lose-work-offline`, Oct 21, 2026, Product Craft)
-   - Key Takeaway: Local-first writes saved on-device in milliseconds combined with background sync and timestamped conflict resolution.
+3. **Is a Monolithic Frontend Slowing Your Team Down? The Solution: Micro-Frontends** (`https://omon.dev/en/blog/micro-frontends-when-monolith-slows-teams-down`, Oct 21, 2026, System Design)
+   - Key Takeaway: Module Federation, Next.js Multi-Zones, and Turborepo/Nx monorepos help large teams scale frontend delivery—while small teams and MVPs should start with a clean Modular Monolith.
 4. **The Simple Mental Trick Behind Instant Search & Smart Filtering** (`https://omon.dev/en/blog/how-instant-search-avoids-repeating-work`, Oct 08, 2026, Problem Solving)
    - Key Takeaway: Single-pass sliding window / pointer state tracking avoids redundant work in instant search bars and duplicate payment checks.
